@@ -9211,12 +9211,15 @@ textarea.form-control {
     letter-spacing: 3px; }
   .heading-section h1.big {
     position: absolute;
-    top: 0px;
-    left: 0;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 7vw;
     color: rgba(255, 255, 255, 0.1);
     z-index: -1;
-    font-weight: 900; }
+    font-weight: 900;
+    text-align: center;
+    width: 100%; }
     .heading-section h1.big.big-2 {
       right: 0; }
 

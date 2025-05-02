@@ -8810,6 +8810,10 @@ h1, h2, h3, h4, h5,
     color: #ffbd39; }
 
 .resume-wrap {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   margin-bottom: 30px;
   background: rgba(255, 255, 255, 0.1);

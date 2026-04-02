@@ -1,737 +1,621 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Tanvir Taushif Portfolio</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tanvir Taushif — Data Analyst</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="C:\Users\88878\Desktop\Tanvir-Taushif-Portfolio-main\Tanvir-Taushif-Portfolio-main\css\style.css"> -->
+</head>
+<body>
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+  <!-- ░░ CURSOR ░░ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
 
-    <link rel="stylesheet" href="css/aos.css">
+  <!-- ░░ NAV ░░ -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">TT<span class="dot">.</span></div>
+    <button class="nav__toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#home" class="nav__link">Home</a></li>
+      <li><a href="#about" class="nav__link">About</a></li>
+      <li><a href="#resume" class="nav__link">Resume</a></li>
+      <li><a href="#projects" class="nav__link">Projects</a></li>
+      <li><a href="#contact" class="nav__link">Contact</a></li>
+    </ul>
+  </nav>
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
+  <!-- ░░ HERO ░░ -->
+  <section class="hero" id="home">
+    <div class="hero__noise"></div>
+    <div class="hero__grid"></div>
 
+    <div class="hero__content">
+      <div class="hero__label reveal">Available for work</div>
+      <h1 class="hero__name reveal">
+        <span class="hero__name-first">Tanvir</span>
+        <span class="hero__name-last">Taushif</span>
+      </h1>
+      <div class="hero__role reveal">
+        <span class="hero__role-prefix">I'm a </span>
+        <span class="hero__typing" id="typingText"></span>
+        <span class="hero__cursor">|</span>
+      </div>
+      <p class="hero__desc reveal">
+        Data-driven problem solver. I turn raw data into clear, actionable insights — from dashboards to fraud detection. Excel · SQL · Python · Power BI · Metabase.
+      </p>
+      <div class="hero__actions reveal">
+        <a href="#projects" class="btn btn--primary">View My Work</a>
+        <a href="https://drive.google.com/file/d/17jsDiaIyZcOzouInS464jzrRDiyMLWaJ/view?usp=sharing" class="btn btn--ghost" target="_blank">Download CV</a>
+      </div>
+    </div>
 
-<style>
+    <div class="hero__image reveal">
+      <div class="hero__img-frame">
+        <img src="images/new_dp_portfolio.jpg" alt="Tanvir Taushif" />
+        <div class="hero__img-badge">
+          <span class="badge-number" data-target="20">0</span>
+          <span class="badge-label">Projects<br>Completed</span>
+        </div>
+      </div>
+    </div>
 
-/*======================================
-//--//-->   ABOUT
-======================================*/
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
 
-.about-mf .box-shadow-full {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
+  <!-- ░░ ABOUT ░░ -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">01 — About</span>
+        <h2 class="section__title">Who I Am</h2>
+      </div>
 
-.about-mf .about-img {
-  margin-bottom: 2rem;
-}
-
-.about-mf .about-img img {
-  margin-left: 10px;
-}
-
-
-.skill-mf .progress {
-  /* background-color: #cde1f8; */
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
-}
-
-.skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #ffbd39;
-}
-
-
-/* Animation styles */
-#typing-animation {
-  position: relative;
-  font-size: 30px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 3s steps(20, end) infinite;
-}
-
-#typing-animation:before {
-  content: "";
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: #ccc;
-  animation: typing-cursor 0.5s ease-in-out infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes typing-cursor {
-  from {
-    width: 5px;
-  }
-  to {
-    width: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .col-md-6 {
-    flex: 1 1 100%;
-  }
-}
-
-
-/* project image zoom effect */
-
-.zoom-effect {
-  overflow: hidden;
-  transition: transform 0.3s ease-out;
-}
-
-.zoom-effect:hover {
-  transform: scale(1.1);
-}
-
-#typing-container {
-    display: inline;
-    font-family: monospace;
-    font-size: 1.5rem;
-    white-space: nowrap;
-    position: relative;
-  }
-
-  /* A clear blinking vertical bar cursor */
-  .cursor {
-    display: inline-block;
-    width: 3px; /* Wider for better visibility */
-    height: 1.5rem;
-    background-color: #ccc;
-    margin-left: 4px;
-    animation: blink 1s step-start infinite;
-  }
-
-  @keyframes blink {
-    50% {
-      opacity: 0;
-    }
-  }
-
-</style>
-
-
-  </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  
-	  
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Tanvir Taushif</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
-
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
-	      	<div class="overlay"></div>
-	         <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/new_dp_portfolio.jpg);">
-	          	 <div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Tanvir Taushif</span></h1>
-
-						<!-- Element to contain animated typing -->
-						<!-- HTML span elements for typed text and cursor -->
-				<span id="typing-container">
-					<span id="typing-animation"></span>
-					<span class="cursor"></span> <!-- Blinking cursor -->
-				</span>
-  
-						<script>
-							// Get the element that will display the animated text
-							const typingAnimationElement = document.getElementById('typing-animation');
-						
-							// Array of text strings to cycle through
-							const typingTexts = [
-							'Engineer',
-							'Data Analyst',
-							'Business Intelligence Developer',
-							'EdTech Instructor',
-							'Teacher'
-							];
-						
-							// Variables to track current text and character position
-							let textIndex = 0; // Index of current string in typingTexts
-							let charIndex = 0; // Index of current character in string
-						
-							// Function to type one character at a time
-							function type() {
-							const currentText = typingTexts[textIndex]; // Get current text string
-							if (charIndex < currentText.length) {
-								// Add one character to the element
-								typingAnimationElement.textContent += currentText.charAt(charIndex);
-								charIndex++; // Move to next character
-								setTimeout(type, 140); // Delay before typing next character
-							} else {
-								// Once full word is typed, wait then start erasing
-								setTimeout(erase, 1200); // Delay before erase starts
-							}
-							}
-						
-							// Function to erase one character at a time
-							function erase() {
-							if (charIndex > 0) {
-								// Remove last character from text
-								typingAnimationElement.textContent = typingAnimationElement.textContent.slice(0, -1);
-								charIndex--; // Move backward in text
-								setTimeout(erase, 70); // Delay before erasing next character
-							} else {
-								// Once erased, move to next word in array
-								textIndex = (textIndex + 1) % typingTexts.length; // Loop back to start
-								setTimeout(type, 500); // Delay before typing next word
-							}
-							}
-						
-							// Start the typing animation when the page loads
-							type();
-						</script>
-
-						<br>
-						<br>
-			            <h6>I’m a data-driven problem solver with hands-on experience in Excel, SQL, Python, Power BI and Metabase. I turn raw data into clear, actionable insights — from dashboards to fraud detection. Let’s make your data work smarter.
-						</h6>
-						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-						<!-- <br> -->
-			            <p> 
-							<a href="https://github.com/Tanvir-Taushif?tab=repositories" class="btn btn-white btn-outline-white py-3 px-4" target="_blank">My works</a></p>
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
-		</div>
-    </section>
-
-
-
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-    	<div class="container">	
-					<div class="col-md-12 col-lg-12 d-flex">
-							<div class="col-md-12 heading-section ftco-animate">
-								
-								<h1 class="big text-center">About</h1>
-								<h2 class="mb-4 text-center">About Me</h2>
-								
-								<p>I'm a Data Analyst with hands-on experience in solving real-world problems through data. I specialize in Excel, SQL, Python, Metabase and Power BI for ETL, data wrangling, visualization, and statistical analysis. My academic background in Information and Communication Engineering from BUP has given me a strong foundation in analytics, machine learning, and database systems. <br>
-
-									I’ve worked on various portfolio projects, including fraud detection logic, customer segmentation, cohort analysis, RFM Segmentation and dashboard design — all focused on driving actionable insights. I'm also experienced in mentoring others as a Power BI Instructor, which helped me build strong communication and analytical thinking skills. <br>
-									
-									I'm eager to join a data-driven team where I can contribute, grow, and turn complex data into impactful business decisions.</p>
-								<ul class="about-info mt-4 px-md-0 px-2">
-										<li class="d-flex"><span><strong>Profile:</strong></span> <span>Data Analyst</span></li>
-										<li class="d-flex"><span><strong>Domain:</strong></span> <span> E-commerce, Banking, Hotel and Tourism Management, Public Health, Education</span></li>
-										<li class="d-flex"><span><strong>Education:</strong></span> <span>BSc. in Information and Communication Engineering, BUP</span></li>
-										<li class="d-flex"><span><strong>Language:</strong></span> <span>English, Bengali</span></li>
-										<li class="d-flex"><span><strong>BI Tools:</strong></span> <span>Microsoft Power BI, Metabase, Excel, Google Sheets</span></li>
-										<li class="d-flex"><span><strong>Cloud Platforms:</strong></span> <span>Supabase, Google Big Query</span></li>
-										<li class="d-flex"><span><strong>Other Skills:</strong></span> <span>SQL (MySQL, PostgreSQL), Python (Pandas, Numpy, Matplotlib, Seaborn, SQL Alchemy, DLT), Git, ETL Pipeline, A/B Testing, Hypothesis Testing, Machine Learning</span></li>
-										<li class="d-flex"><span><strong>Interest:</strong></span> <span>Data Storytelling, Mentorship, Learning New Tech, Reading Books, Watching Anime</span></li>
-								</ul>
-									  
-							</div>
-						</div>
-
-
-						<div class="counter-wrap ftco-animate d-flex justify-content-center mt-5">
-							<div class="text text-center">
-								<p class="mb-4">
-									<span class="number" data-number="20">0</span> <span>+</span>
-									<span>&nbsp; Projects completed</span>
-								</p>
-								<p><a href="https://www.linkedin.com/in/tanvir-taushif-751044204/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
-							</div>
-						</div>
-				</div>
-			</div>
-		</div>
-    </section>
-
-
-
-	
-    <section class="ftco-section ftco-no-pb" id="resume-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resume</h2>
-            <p>Aspiring Data Analyst with hands-on experience in real-world data projects, including business dashboards, customer segmentation, and fraud detection logic. Skilled in SQL, Python, Power BI, and ETL, statistical analysis. Strong foundation in machine learning concepts, with a passion for transforming data into actionable insights.</p>
-          </div>
+      <div class="about__grid">
+        <div class="about__text reveal">
+          <p class="about__lead">I'm a Data Analyst with hands-on experience solving real-world problems through data.</p>
+          <p>I specialize in Excel, SQL, Python, Metabase and Power BI for ETL, data wrangling, visualization, and statistical analysis. My academic background in Information and Communication Engineering from BUP has given me a strong foundation in analytics, machine learning, and database systems.</p>
+          <p>I've worked on portfolio projects including fraud detection logic, customer segmentation, cohort analysis, RFM Segmentation and dashboard design. I'm also experienced in mentoring others as a Power BI Instructor.</p>
         </div>
 
-		<div class="row">
-			<h1 class="big-4">Experience</h1>
-			<div class="underline"></div>
-		  </div>
-		  <br>
-		  
-		  <div class="row">
-			<!-- Data Analyst Cartup -->
-			<div class="col-md-6 mb-4">
-				<div class="resume-wrap ftco-animate">
-				  <span class="date">July 2025 – Present</span>
-				  <h2>
-					<img src="./images/cartup.webp" alt="Interactive Cares Logo" style="height: 50px; margin-right: 8px; vertical-align: middle;">
-					Cartup | US-Bangla Group
-				  </h2>
-				  <span class="position">Data Analyst</span>
-				  <p class="mt-4">
-					<ul>
-					  <li>Joined as a Data Analyst at Cartup | US-Bangla Group</li>
-					</ul>
-				  </p>
-				</div>
-			  </div>
-			<!-- Power BI Support Instructor -->
-			<div class="col-md-6 mb-4">
-			  <div class="resume-wrap ftco-animate">
-				<span class="date">March 2025 – Present</span>
-				<h2>
-				  <img src="./images/ic_logo.png" alt="Interactive Cares Logo" style="height: 50px; margin-right: 8px; vertical-align: middle;">
-				  Interactive Cares
-				</h2>
-				<span class="position">Power BI Support Instructor</span>
-				<p class="mt-4">
-				  <ul>
-					<li>Provided one-on-one guidance to learners in Power BI for Business Intelligence.</li>
-					<li>Helped simplify complex workflows and troubleshoot data issues in Power BI and Excel.</li>
-					<li>Mentored students and professionals to confidently apply data analytics in real-world scenarios.</li>
-				  </ul>
-				</p>
-			  </div>
-			</div>
-		  
-		  </div>
-		  
-		  <div class="row">
-			<!-- Selise Digital Platforms -->
-			<div class="col-md-6 mb-4">
-				<div class="resume-wrap ftco-animate">
-					<span class="date">Nov 2023 – Dec 2023</span>
-					<h2>
-					  <img src="./images/selise_logo.png" alt="Selise Logo" style="height: 50px; margin-right: 8px; vertical-align: middle;">
-					  Selise Digital Platforms, Dhaka
-					</h2>
-					<span class="position">Intern Software Engineer</span>
-					<p class="mt-4">
-						<ul>
-							<li>Developed an e-commerce platform using the MEAN stack (MongoDB, Express, Angular, Node.js).</li>
-							<li>Handled backend database operations and built scalable logic for product and customer data.</li>
-							<li>Gained hands-on experience in system design, debugging, and data-driven app development.</li>
-						</ul>
-					</p>
-				  </div>
-			</div>
-			<!-- BUP InfoTech Club -->
-			<div class="col-md-6 mb-4">
-			  <div class="resume-wrap ftco-animate">
-				<span class="date">Jan 2023 – Mar 2024</span>
-				<h2>
-				  <img src="./images/itc_logo.png" alt="BUP Logo" style="height: 50px; margin-right: 8px; vertical-align: middle;">
-				  BUP InfoTech Club
-				</h2>
-				<span class="position">President</span>
-				<p class="mt-4">
-				  <ul>
-					<li>Led the university’s tech club and mentored members in data analysis, Python, and SQL.</li>
-					<li>Hosted data challenges and collaborated with companies like Daraz, Grameenphone, and Creative IT.</li>
-					<li>Strengthened leadership, planning, and technical mentoring experience through strategic events.</li>
-				  </ul>
-				</p>
-			  </div>
-			</div>
-		  </div>
-		  
-		<br>
-		<br>
-
-		<div class="row">
-			<h1 class="big-4">Education</h1>
-			<div class="underline"></div>
-		  </div>
-		  <br>
-		  
-		  <div class="row">
-			<!-- University -->
-			<div class="col-md-6 mb-4">
-			  <div class="resume-wrap ftco-animate h-100">
-				<span class="date">2020 – 2024</span>
-				<h4>
-				  <img src="./images/bup_logo.png" alt="BUP Logo" style="height: 50px; vertical-align: middle; margin-right: 8px;">
-				  BSc. in Information and Communication Engineering
-				</h4>
-				<span class="position">Bangladesh University of Professionals (BUP)</span>
-				<p class="mt-4">CGPA: 3.26 / 4.00</p>
-			  </div>
-			</div>
-		  
-			<!-- College -->
-			<div class="col-md-6 mb-4">
-			  <div class="resume-wrap ftco-animate h-100">
-				<span class="date">2017 – 2019</span>
-				<h4>
-				  <img src="./images/dc_logo.png" alt="Dhaka College Logo" style="height: 50px; vertical-align: middle; margin-right: 8px;">
-				  Higher Secondary Certificate (Science)
-				</h4>
-				<span class="position">Dhaka College</span>
-				<p class="mt-4">GPA: 5.00 / 5.00</p>
-			  </div>
-			</div>
-		  </div>
-		  
-		  <div class="row">
-			<!-- School -->
-			<div class="col-md-6 mb-4">
-			  <div class="resume-wrap ftco-animate h-100">
-				<span class="date">2007 – 2017</span>
-				<h4>
-				  <img src="./images/lab_logo.png" alt="Govt Lab Logo" style="height: 50px; vertical-align: middle; margin-right: 8px;">
-				  Secondary School Certificate (Science)
-				</h4>
-				<span class="position">Government Laboratory High School, Dhaka</span>
-				<p class="mt-4">GPA: 5.00 / 5.00</p>
-			  </div>
-			</div>
-		  </div>
-    		<div class="row justify-content-center mt-5">
-    			<div class="col-md-6 text-center ftco-animate">
-    				<p><a href="https://drive.google.com/file/d/17jsDiaIyZcOzouInS464jzrRDiyMLWaJ/view?usp=sharing" class="btn btn-primary py-4 px-5">Download CV</a></p>
-    			</div>
-    		</div>
-    	</div>
-    </section>
-
-   
-
-    <section class="ftco-section" id="project-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Projects</h1>
-            <h2 class="mb-4">Projects</h2>
-            <p>Below are the sample Data Analytics projects on Excel, Power BI, SQL, Python, ML.</p>
-          </div>
-        </div>
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="https://app.powerbi.com/view?r=eyJrIjoiZWM2ZTFjNTEtOTk2MC00YjZiLTg2ODYtOGEwNmFiZWI1ZDg5IiwidCI6IjFiMGY2ZDU2LTBkOTEtNDZiNy04NzFiLTBmNzljNzJhYmYxZiIsImMiOjEwfQ%3D%3D" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://app.powerbi.com/view?r=eyJrIjoiZWM2ZTFjNTEtOTk2MC00YjZiLTg2ODYtOGEwNmFiZWI1ZDg5IiwidCI6IjFiMGY2ZDU2LTBkOTEtNDZiNy04NzFiLTBmNzljNzJhYmYxZiIsImMiOjEwfQ%3D%3D">HSBC Bank PoC Group Analysis Project in Power BI</a></h3>
-                <p>Built an end-to-end interactive banking dashboard as group project using synthetic data to simulate real operations. Applied fraud detection, customer segmentation, and KPI analysis to support digital transformation at HSBC Bank Bangladesh.</p>
-              </div>
+        <div class="about__details reveal">
+          <div class="detail-card">
+            <div class="detail-item">
+              <span class="detail-label">Profile</span>
+              <span class="detail-value">Data Analyst</span>
             </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="https://app.powerbi.com/view?r=eyJrIjoiYmI4ZTg3YTMtZWE4Yy00N2JkLWFlNWMtZjUzMTBhNzhlNDMzIiwidCI6IjFiMGY2ZDU2LTBkOTEtNDZiNy04NzFiLTBmNzljNzJhYmYxZiIsImMiOjEwfQ%3D%3D" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://app.powerbi.com/view?r=eyJrIjoiYmI4ZTg3YTMtZWE4Yy00N2JkLWFlNWMtZjUzMTBhNzhlNDMzIiwidCI6IjFiMGY2ZDU2LTBkOTEtNDZiNy04NzFiLTBmNzljNzJhYmYxZiIsImMiOjEwfQ%3D%3D">Adventure Works Bike Shop Analysis with RFM Segmentation and Cohort Analysis</a></h3>
-                <p>Created an interactive Power BI dashboard featuring cohort analysis and RFM segmentation to explore sales performance and customer retention trends. Integrated advanced DAX, custom visuals, and dynamic filtering for deep business insights.</p>
-              </div>
+            <div class="detail-item">
+              <span class="detail-label">Education</span>
+              <span class="detail-value">BSc. ICE, BUP</span>
             </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href="https://app.powerbi.com/view?r=eyJrIjoiMjEyMTNjZDYtZDhmOS00YWRiLWJmNjItNTliOTM5MjI0OGU2IiwidCI6IjFiMGY2ZDU2LTBkOTEtNDZiNy04NzFiLTBmNzljNzJhYmYxZiIsImMiOjEwfQ%3D%3D" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://app.powerbi.com/view?r=eyJrIjoiMjEyMTNjZDYtZDhmOS00YWRiLWJmNjItNTliOTM5MjI0OGU2IiwidCI6IjFiMGY2ZDU2LTBkOTEtNDZiNy04NzFiLTBmNzljNzJhYmYxZiIsImMiOjEwfQ%3D%3D">Hotel Chain Management Dashboard in Power BI</a></h3>
-                <p>Designed an interactive dashboard to analyze hotel revenue, booking trends, and customer ratings. Leveraged advanced DAX, RevPAR/ADR metrics, and drillthrough features to deliver actionable business insights.</p>
-              </div>
+            <div class="detail-item">
+              <span class="detail-label">Languages</span>
+              <span class="detail-value">English, Bengali</span>
             </div>
-          </div>
-        </div>
-	<br>
-		<!-- added justify-content-center to center align the last two projects -->
-		<div class="row d-flex justify-content-center">  
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://app.powerbi.com/view?r=eyJrIjoiNWE5MGNmY2UtMmY5Yi00NzZlLTg5OTQtNmMzNmIxMjYzYzRiIiwidCI6IjFiMGY2ZDU2LTBkOTEtNDZiNy04NzFiLTBmNzljNzJhYmYxZiIsImMiOjEwfQ%3D%3D" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://app.powerbi.com/view?r=eyJrIjoiNWE5MGNmY2UtMmY5Yi00NzZlLTg5OTQtNmMzNmIxMjYzYzRiIiwidCI6IjFiMGY2ZDU2LTBkOTEtNDZiNy04NzFiLTBmNzljNzJhYmYxZiIsImMiOjEwfQ%3D%3D">Customer Cohort Analysis Dashboard in Power BI</a></h3>
-				  <p>Built a Power BI dashboard to analyze customer retention, churn, and revenue trends using cohort modeling. Applied advanced DAX, KPIs, and conditional formatting to uncover actionable insights for customer segmentation and growth.</p>
-				</div>
-			  </div>
-			</div>
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/Tanvir-Taushif/Dhaka-Dengue-Analysis" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://github.com/Tanvir-Taushif/Dhaka-Dengue-Analysis">Dhaka Dengue Outbreak Analysis (Excel-Based)</a></h3>
-				  <p>Conducted a comprehensive analysis of seasonal dengue outbreaks in Dhaka using Excel to identify infection patterns, demographic risk factors, and high-risk age groups. Visualized key trends to support targeted public health interventions. </p>
-				</div>
-			  </div>
-			</div>
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/Tanvir-Taushif/TechnoHub-Data-MYSQL-Analytics-Case-Study" class="block-20 zoom-effect" style="background-image: url('./images/proj_6.JPG');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://github.com/Tanvir-Taushif/TechnoHub-Data-MYSQL-Analytics-Case-Study">TechnoHub Electronics Retail SQL Case Study</a></h3>
-				  <p>Executed a detailed SQL-based analysis for TechnoHub, exploring customer spending behavior, sales trends, and inventory control. Applied advanced MySQL techniques like CTEs, joins, subqueries, and window functions. Insights supported revenue growth strategies, stock optimization, and customer retention planning.</p>
-				</div>
-			  </div>
-			</div>
-		 </div>
-		<br>
-		 <!-- added justify-content-center to center align the last two projects -->
-		<div class="row d-flex justify-content-center">  
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/Tanvir-Taushif/SK_Mart-Retail_Shop-Case_Study-SQL-Analysis" class="block-20 zoom-effect" style="background-image: url('./images/sk_mart.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://github.com/Tanvir-Taushif/SK_Mart-Retail_Shop-Case_Study-SQL-Analysis">SK Mart MySQL Case Study Analysis</a></h3>
-				  <p>Conducted end-to-end SQL analysis on a retail dataset, including data modeling (ERD), sales trend analysis, customer behavior tracking, and campaign effectiveness using window functions, CTEs, and scheduled triggers.
-			 	  Generated business insights on daily revenue, product performance, and buyer patterns, with classification logic (NTILE, CASE) to identify high-value orders and marketing impact.</p>
-				</div>
-			  </div>
-			</div>
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/Tanvir-Taushif/Spotify-Data-Analysis" class="block-20 zoom-effect" style="background-image: url('./images/proj_7.JPG');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://github.com/Tanvir-Taushif/Spotify-Data-Analysis">Spotify Streaming Behavior Dashboard (Excel)</a></h3>
-				  <p>Analyzed over 300,000 Spotify streaming records to uncover user listening patterns, platform preferences, and artist rankings. Utilized Excel's Power Query, PowerPivot, and Pivot Tables to transform raw data into an interactive dashboard. Key insights include peak streaming times and shuffle play behaviors.</p>
-				</div>
-			  </div>
-			</div>
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/Tanvir-Taushif/Restaurant-Order-Menu-Analysis-PostgreSQL-Metabase" class="block-20 zoom-effect" style="background-image: url('./images/proj_8.JPG');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://github.com/Tanvir-Taushif/Restaurant-Order-Menu-Analysis-PostgreSQL-Metabase">Restaurant Order & Menu Analysis – PostgreSQL, Metabase BI Dashboard</a></h3>
-				  <p>Built a fully dynamic BI dashboard using PostgreSQL (hosted on Supabase) and Metabase, featuring real-time order data refresh, SMTP-triggered daily email reports, and seamless data pipeline integration. Performed SQL-driven analysis on order trends, menu performance, and customer behavior using CTEs, aggregations, and window functions to uncover key business insights like optimal operating hours and combo deal opportunities.</p>
-				</div>
-			  </div>
-			</div>
-		 </div>
-	  </div>
-    </section>
-
-	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
-      <div class="container">
-		<div class="row d-md-flex align-items-center">
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="5">0</strong>
-                <span>Achievements</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="20">0</strong>
-                <span>Projects</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="50">0</strong>
-                <span>Mentored Students</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="300">0</strong>
-                <span>Cups of coffee</span>
-              </div>
+            <div class="detail-item">
+              <span class="detail-label">Location</span>
+              <span class="detail-value">Dhaka, Bangladesh</span>
             </div>
           </div>
         </div>
       </div>
-	
-	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-			<!-- <div class="container"> -->
-				<div class="row justify-content-center">
-					<div class="col-md-7 ftco-animate text-center">
-						<h2>More projects on<span> Github  </span> </h2>
-						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
-						<br>
-						<p><a href="https://github.com/Tanvir-Taushif?tab=repositories" class="btn btn-primary py-3 px-5" target ="_blank">GitHub</a></p>
-						</div>
-					</div>
-				</div>
-			<!-- </div> -->
-		</div>
-	</section>
 
+      <div class="skills reveal">
+        <h3 class="skills__title">Tech Stack</h3>
+        <div class="skills__groups">
+          <div class="skill-group">
+            <span class="skill-group__label">BI Tools</span>
+            <div class="skill-group__tags">
+              <span class="tag">Power BI</span>
+              <span class="tag">Metabase</span>
+              <span class="tag">Excel</span>
+              <span class="tag">Google Sheets</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <span class="skill-group__label">Data & Code</span>
+            <div class="skill-group__tags">
+              <span class="tag">SQL (MySQL / PostgreSQL)</span>
+              <span class="tag">Python</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">Numpy</span>
+              <span class="tag">Matplotlib</span>
+              <span class="tag">Seaborn</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <span class="skill-group__label">Cloud & Ops</span>
+            <div class="skill-group__tags">
+              <span class="tag">Supabase</span>
+              <span class="tag">BigQuery</span>
+              <span class="tag">Git</span>
+              <span class="tag">ETL Pipeline</span>
+              <span class="tag">DLT</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <span class="skill-group__label">Analytics</span>
+            <div class="skill-group__tags">
+              <span class="tag">A/B Testing</span>
+              <span class="tag">Hypothesis Testing</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">RFM Segmentation</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="stats reveal">
+        <div class="stat">
+          <span class="stat__number" data-target="20">0</span><span class="stat__plus">+</span>
+          <span class="stat__label">Projects</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number" data-target="50">0</span><span class="stat__plus">+</span>
+          <span class="stat__label">Students Mentored</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number" data-target="5">0</span>
+          <span class="stat__label">Achievements</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number" data-target="300">0</span><span class="stat__plus">+</span>
+          <span class="stat__label">Cups of Coffee</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-      <div class="container">
-      	<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Contact Me</h2>
-            <p>Below are the details to reach out to me!</p>
+  <!-- ░░ RESUME ░░ -->
+  <section class="section resume" id="resume">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">02 — Resume</span>
+        <h2 class="section__title">Experience &amp; Education</h2>
+      </div>
+
+      <div class="resume__grid">
+        <!-- Experience -->
+        <div class="resume__col">
+          <h3 class="resume__col-title reveal">Experience</h3>
+
+          <div class="timeline">
+            <div class="timeline__item reveal">
+              <div class="timeline__dot"></div>
+              <div class="timeline__card">
+                <span class="timeline__date">July 2025 — Present</span>
+                <h4 class="timeline__role">Data Analyst</h4>
+                <span class="timeline__company">Cartup | US-Bangla Group</span>
+                <ul class="timeline__list">
+                  <li>Joined as a Data Analyst at Cartup | US-Bangla Group.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline__item reveal">
+              <div class="timeline__dot"></div>
+              <div class="timeline__card">
+                <span class="timeline__date">March 2025 — Present</span>
+                <h4 class="timeline__role">Power BI Support Instructor</h4>
+                <span class="timeline__company">Interactive Cares</span>
+                <ul class="timeline__list">
+                  <li>Provided one-on-one guidance to learners in Power BI for Business Intelligence.</li>
+                  <li>Helped simplify complex workflows and troubleshoot data issues in Power BI and Excel.</li>
+                  <li>Mentored students and professionals to confidently apply data analytics in real-world scenarios.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline__item reveal">
+              <div class="timeline__dot"></div>
+              <div class="timeline__card">
+                <span class="timeline__date">Nov 2023 — Dec 2023</span>
+                <h4 class="timeline__role">Intern Software Engineer</h4>
+                <span class="timeline__company">Selise Digital Platforms, Dhaka</span>
+                <ul class="timeline__list">
+                  <li>Developed an e-commerce platform using the MEAN stack.</li>
+                  <li>Handled backend database operations and built scalable logic for product and customer data.</li>
+                  <li>Gained hands-on experience in system design, debugging, and data-driven app development.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline__item reveal">
+              <div class="timeline__dot"></div>
+              <div class="timeline__card">
+                <span class="timeline__date">Jan 2023 — Mar 2024</span>
+                <h4 class="timeline__role">President</h4>
+                <span class="timeline__company">BUP InfoTech Club</span>
+                <ul class="timeline__list">
+                  <li>Led the university's tech club and mentored members in data analysis, Python, and SQL.</li>
+                  <li>Hosted data challenges and collaborated with Daraz, Grameenphone, and Creative IT.</li>
+                  <li>Strengthened leadership, planning, and technical mentoring experience.</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="row d-flex contact-info mb-5">
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-map-signs"></span>
-          		</div>
-          		<h3 class="mb-4">Address</h3>
-	            <p>Dhaka, Bangladesh</p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-phone2"></span>
-          		</div>
-          		<h3 class="mb-4">Contact Number</h3>
-	            <p><a href="tel://0101010101">+88 01980414186</a></p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-paper-plane"></span>
-          		</div>
-          		<h3 class="mb-4">Email Address</h3>
-	            <p><a href="mailto:info@yoursite.com">tanvirpial9961@gmail.com</a></p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-globe"></span>
-          		</div>
-          		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="https://drive.google.com/file/d/17jsDiaIyZcOzouInS464jzrRDiyMLWaJ/view?usp=sharing" target="_blank">Resume Link</a></p>
-	          </div>
+        <!-- Education -->
+        <div class="resume__col">
+          <h3 class="resume__col-title reveal">Education</h3>
+
+          <div class="timeline">
+            <div class="timeline__item reveal">
+              <div class="timeline__dot"></div>
+              <div class="timeline__card">
+                <span class="timeline__date">2020 — 2024</span>
+                <h4 class="timeline__role">BSc. in Information and Communication Engineering</h4>
+                <span class="timeline__company">Bangladesh University of Professionals (BUP)</span>
+                <p class="timeline__grade">CGPA: 3.26 / 4.00</p>
+              </div>
+            </div>
+
+            <div class="timeline__item reveal">
+              <div class="timeline__dot"></div>
+              <div class="timeline__card">
+                <span class="timeline__date">2017 — 2019</span>
+                <h4 class="timeline__role">Higher Secondary Certificate (Science)</h4>
+                <span class="timeline__company">Dhaka College</span>
+                <p class="timeline__grade">GPA: 5.00 / 5.00 ✦</p>
+              </div>
+            </div>
+
+            <div class="timeline__item reveal">
+              <div class="timeline__dot"></div>
+              <div class="timeline__card">
+                <span class="timeline__date">2007 — 2017</span>
+                <h4 class="timeline__role">Secondary School Certificate (Science)</h4>
+                <span class="timeline__company">Government Laboratory High School, Dhaka</span>
+                <p class="timeline__grade">GPA: 5.00 / 5.00 ✦</p>
+              </div>
+            </div>
           </div>
 
-		  <div class="container">
-			<br>
-			<br>
-			<div class="row justify-content-center">
-				<div class="col-md-7 ftco-animate text-center">
-					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/oCQ9acjiX4GFnLxP8" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
-				</div>
-			</div>
-				<br>
-					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-					  <li class="ftco-animate normal-txt">Find me on  </li>
-					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/tanvir-taushif-751044204/"><span class="icon-linkedin"></span></a></li>
-					  <li class="ftco-animate"><a href="https://github.com/Tanvir-Taushif"><span class="icon-github"></span></a></li>  
-					  <li class="ftco-animate"><a href="https://wa.me/8801980414186"><span class="icon-whatsapp"></span></a></li>
-					  <li class="ftco-animate"><a href="https://www.facebook.com/tanvir.taushif.2024/"><span class="icon-facebook"></span></a></li>
-				      <li class="ftco-animate"><a href="https://www.instagram.com/solo_chronicles_?igsh=MWR1MnhlcnI4amh5OA=="><span class="icon-instagram"></span></a></li>
-					</ul>
-				<br>
-		   </div>
-   </div>
- </section>
+          <div class="resume__cv reveal">
+            <a href="https://drive.google.com/file/d/17jsDiaIyZcOzouInS464jzrRDiyMLWaJ/view?usp=sharing" class="btn btn--primary" target="_blank">Download CV →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ░░ PROJECTS ░░ -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">03 — Projects</span>
+        <h2 class="section__title">Selected Work</h2>
+        <p class="section__sub">Data analytics projects spanning Excel, Power BI, SQL, Python & ML.</p>
+      </div>
 
- 
-	
-    <footer class="ftco-footer ftco-section">
-		<div class="container">
-		  <div class="row">
-			<div class="col-md-12 text-center">
-  
-			  <p>
-	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | </i> by <a href="https://www.linkedin.com/in/tanvir-taushif-751044204/" target="_blank">Tanvir Taushif</a>
-	</p>
-			</div>
-		  </div>
-		</div>
-	  </footer>
+      <div class="projects__grid">
 
+        <div class="project-card reveal" data-index="01">
+          <div class="project-card__img">
+            <img src="images/proj_1.jpg" alt="HSBC Bank Project" loading="lazy"/>
+            <div class="project-card__overlay">
+              <a href="https://app.powerbi.com/view?r=eyJrIjoiZWM2ZTFjNTEtOTk2MC00YjZiLTg2ODYtOGEwNmFiZWI1ZDg5IiwidCI6IjFiMGY2ZDU2LTBkOTEtNDZiNy04NzFiLTBmNzljNzJhYmYxZiIsImMiOjEwfQ%3D%3D" class="project-card__link" target="_blank">View Project ↗</a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="ptag">Power BI</span><span class="ptag">Banking</span><span class="ptag">Fraud Detection</span>
+            </div>
+            <h3 class="project-card__title">HSBC Bank PoC Group Analysis</h3>
+            <p class="project-card__desc">End-to-end interactive banking dashboard using synthetic data. Applied fraud detection, customer segmentation, and KPI analysis to support digital transformation at HSBC Bank Bangladesh.</p>
+          </div>
+        </div>
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+        <div class="project-card reveal" data-index="02">
+          <div class="project-card__img">
+            <img src="images/proj_2.jpg" alt="Adventure Works" loading="lazy"/>
+            <div class="project-card__overlay">
+              <a href="https://app.powerbi.com/view?r=eyJrIjoiYmI4ZTg3YTMtZWE4Yy00N2JkLWFlNWMtZjUzMTBhNzhlNDMzIiwidCI6IjFiMGY2ZDU2LTBkOTEtNDZiNy04NzFiLTBmNzljNzJhYmYxZiIsImMiOjEwfQ%3D%3D" class="project-card__link" target="_blank">View Project ↗</a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="ptag">Power BI</span><span class="ptag">RFM</span><span class="ptag">Cohort Analysis</span>
+            </div>
+            <h3 class="project-card__title">Adventure Works — RFM & Cohort Analysis</h3>
+            <p class="project-card__desc">Interactive Power BI dashboard featuring cohort analysis and RFM segmentation to explore sales performance and customer retention trends with advanced DAX and dynamic filtering.</p>
+          </div>
+        </div>
 
+        <div class="project-card reveal" data-index="03">
+          <div class="project-card__img">
+            <img src="images/proj_3.jpg" alt="Hotel Dashboard" loading="lazy"/>
+            <div class="project-card__overlay">
+              <a href="https://app.powerbi.com/view?r=eyJrIjoiMjEyMTNjZDYtZDhmOS00YWRiLWJmNjItNTliOTM5MjI0OGU2IiwidCI6IjFiMGY2ZDU2LTBkOTEtNDZiNy04NzFiLTBmNzljNzJhYmYxZiIsImMiOjEwfQ%3D%3D" class="project-card__link" target="_blank">View Project ↗</a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="ptag">Power BI</span><span class="ptag">Hospitality</span><span class="ptag">RevPAR</span>
+            </div>
+            <h3 class="project-card__title">Hotel Chain Management Dashboard</h3>
+            <p class="project-card__desc">Dashboard to analyze hotel revenue, booking trends, and customer ratings. Leveraged advanced DAX, RevPAR/ADR metrics, and drillthrough features for actionable business insights.</p>
+          </div>
+        </div>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  
-  <script src="js/main.js"></script>
-    
-  </body>
+        <div class="project-card reveal" data-index="04">
+          <div class="project-card__img">
+            <img src="images/proj_4.jpg" alt="Cohort Dashboard" loading="lazy"/>
+            <div class="project-card__overlay">
+              <a href="https://app.powerbi.com/view?r=eyJrIjoiNWE5MGNmY2UtMmY5Yi00NzZlLTg5OTQtNmMzNmIxMjYzYzRiIiwidCI6IjFiMGY2ZDU2LTBkOTEtNDZiNy04NzFiLTBmNzljNzJhYmYxZiIsImMiOjEwfQ%3D%3D" class="project-card__link" target="_blank">View Project ↗</a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="ptag">Power BI</span><span class="ptag">Customer Retention</span><span class="ptag">DAX</span>
+            </div>
+            <h3 class="project-card__title">Customer Cohort Analysis Dashboard</h3>
+            <p class="project-card__desc">Power BI dashboard to analyze customer retention, churn, and revenue trends using cohort modeling with advanced DAX, KPIs, and conditional formatting.</p>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-index="05">
+          <div class="project-card__img">
+            <img src="images/proj_5.jpg" alt="Dengue Analysis" loading="lazy"/>
+            <div class="project-card__overlay">
+              <a href="https://github.com/Tanvir-Taushif/Dhaka-Dengue-Analysis" class="project-card__link" target="_blank">View on GitHub ↗</a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="ptag">Excel</span><span class="ptag">Public Health</span><span class="ptag">Data Viz</span>
+            </div>
+            <h3 class="project-card__title">Dhaka Dengue Outbreak Analysis</h3>
+            <p class="project-card__desc">Comprehensive analysis of seasonal dengue outbreaks in Dhaka using Excel to identify infection patterns, demographic risk factors, and high-risk age groups.</p>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-index="06">
+          <div class="project-card__img">
+            <img src="images/proj_6.JPG" alt="TechnoHub SQL" loading="lazy"/>
+            <div class="project-card__overlay">
+              <a href="https://github.com/Tanvir-Taushif/TechnoHub-Data-MYSQL-Analytics-Case-Study" class="project-card__link" target="_blank">View on GitHub ↗</a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="ptag">MySQL</span><span class="ptag">E-commerce</span><span class="ptag">SQL</span>
+            </div>
+            <h3 class="project-card__title">TechnoHub Electronics Retail SQL Case Study</h3>
+            <p class="project-card__desc">SQL-based analysis for TechnoHub exploring customer spending, sales trends, and inventory control using CTEs, joins, subqueries, and window functions.</p>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-index="07">
+          <div class="project-card__img">
+            <img src="images/sk_mart.jpg" alt="SK Mart" loading="lazy"/>
+            <div class="project-card__overlay">
+              <a href="https://github.com/Tanvir-Taushif/SK_Mart-Retail_Shop-Case_Study-SQL-Analysis" class="project-card__link" target="_blank">View on GitHub ↗</a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="ptag">MySQL</span><span class="ptag">Retail</span><span class="ptag">ERD</span>
+            </div>
+            <h3 class="project-card__title">SK Mart MySQL Case Study Analysis</h3>
+            <p class="project-card__desc">End-to-end SQL analysis including data modeling (ERD), sales trend analysis, customer behavior tracking, and campaign effectiveness using window functions and CTEs.</p>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-index="08">
+          <div class="project-card__img">
+            <img src="images/proj_7.JPG" alt="Spotify Dashboard" loading="lazy"/>
+            <div class="project-card__overlay">
+              <a href="https://github.com/Tanvir-Taushif/Spotify-Data-Analysis" class="project-card__link" target="_blank">View on GitHub ↗</a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="ptag">Excel</span><span class="ptag">Power Query</span><span class="ptag">Dashboard</span>
+            </div>
+            <h3 class="project-card__title">Spotify Streaming Behavior Dashboard</h3>
+            <p class="project-card__desc">Analyzed 300,000+ Spotify streaming records using Excel Power Query, PowerPivot, and Pivot Tables to uncover user listening patterns and peak streaming times.</p>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-index="09">
+          <div class="project-card__img">
+            <img src="images/proj_8.JPG" alt="Restaurant Dashboard" loading="lazy"/>
+            <div class="project-card__overlay">
+              <a href="https://github.com/Tanvir-Taushif/Restaurant-Order-Menu-Analysis-PostgreSQL-Metabase" class="project-card__link" target="_blank">View on GitHub ↗</a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="ptag">PostgreSQL</span><span class="ptag">Metabase</span><span class="ptag">Supabase</span>
+            </div>
+            <h3 class="project-card__title">Restaurant Order & Menu Analysis</h3>
+            <p class="project-card__desc">Fully dynamic BI dashboard using PostgreSQL on Supabase and Metabase with real-time data refresh, SMTP-triggered daily email reports, and SQL-driven analysis.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="projects__more reveal">
+        <a href="https://github.com/Tanvir-Taushif?tab=repositories" class="btn btn--outline" target="_blank">View All on GitHub →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ CONTACT ░░ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">04 — Contact</span>
+        <h2 class="section__title">Let's Connect</h2>
+      </div>
+
+      <div class="contact__grid">
+        <div class="contact__left reveal">
+          <p class="contact__intro">I'm open to new opportunities, collaborations, or just a good conversation about data. Drop me a message!</p>
+          <div class="contact__items">
+            <a href="mailto:tanvirpial9961@gmail.com" class="contact__item">
+              <span class="contact__item-icon">✉</span>
+              <div>
+                <span class="contact__item-label">Email</span>
+                <span class="contact__item-value">tanvirpial9961@gmail.com</span>
+              </div>
+            </a>
+            <a href="tel:+8801980414186" class="contact__item">
+              <span class="contact__item-icon">☎</span>
+              <div>
+                <span class="contact__item-label">Phone</span>
+                <span class="contact__item-value">+88 01980414186</span>
+              </div>
+            </a>
+            <div class="contact__item">
+              <span class="contact__item-icon">⌖</span>
+              <div>
+                <span class="contact__item-label">Location</span>
+                <span class="contact__item-value">Dhaka, Bangladesh</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact__socials">
+            <a href="https://www.linkedin.com/in/tanvir-taushif-751044204/" class="social-link" target="_blank">LinkedIn</a>
+            <a href="https://github.com/Tanvir-Taushif" class="social-link" target="_blank">GitHub</a>
+            <a href="https://wa.me/8801980414186" class="social-link" target="_blank">WhatsApp</a>
+            <a href="https://www.facebook.com/tanvir.taushif.2024/" class="social-link" target="_blank">Facebook</a>
+          </div>
+        </div>
+
+        <div class="contact__right reveal">
+          <a href="https://forms.gle/oCQ9acjiX4GFnLxP8" class="contact__cta" target="_blank">
+            <span class="contact__cta-text">Send me a message</span>
+            <span class="contact__cta-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <span class="footer__logo">TT<span class="dot">.</span></span>
+        <span class="footer__copy">© <span id="year"></span> Tanvir Taushif. All rights reserved.</span>
+        <a href="#home" class="footer__back">↑ Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Custom cursor
+    const cursor = document.getElementById('cursor');
+    const follower = document.getElementById('cursorFollower');
+    let mouseX = 0, mouseY = 0, followerX = 0, followerY = 0;
+    document.addEventListener('mousemove', e => {
+      mouseX = e.clientX; mouseY = e.clientY;
+      cursor.style.left = mouseX + 'px';
+      cursor.style.top = mouseY + 'px';
+    });
+    function animateFollower() {
+      followerX += (mouseX - followerX) * 0.1;
+      followerY += (mouseY - followerY) * 0.1;
+      follower.style.left = followerX + 'px';
+      follower.style.top = followerY + 'px';
+      requestAnimationFrame(animateFollower);
+    }
+    animateFollower();
+    document.querySelectorAll('a, button, .project-card').forEach(el => {
+      el.addEventListener('mouseenter', () => { cursor.classList.add('hover'); follower.classList.add('hover'); });
+      el.addEventListener('mouseleave', () => { cursor.classList.remove('hover'); follower.classList.remove('hover'); });
+    });
+
+    // Nav scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Mobile nav
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('open');
+      toggle.classList.toggle('open');
+    });
+    document.querySelectorAll('.nav__link').forEach(l => l.addEventListener('click', () => {
+      links.classList.remove('open');
+      toggle.classList.remove('open');
+    }));
+
+    // Typing animation
+    const words = ['Engineer', 'Data Analyst', 'BI Developer', 'EdTech Instructor', 'Problem Solver'];
+    let wi = 0, ci = 0, deleting = false;
+    const el = document.getElementById('typingText');
+    function type() {
+      const word = words[wi];
+      if (!deleting) {
+        el.textContent = word.slice(0, ++ci);
+        if (ci === word.length) { deleting = true; setTimeout(type, 1400); return; }
+      } else {
+        el.textContent = word.slice(0, --ci);
+        if (ci === 0) { deleting = false; wi = (wi + 1) % words.length; setTimeout(type, 400); return; }
+      }
+      setTimeout(type, deleting ? 60 : 120);
+    }
+    type();
+
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), 80);
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(r => observer.observe(r));
+
+    // Counter animation
+    function animateCounter(el) {
+      const target = +el.dataset.target;
+      let current = 0;
+      const step = target / 60;
+      const timer = setInterval(() => {
+        current = Math.min(current + step, target);
+        el.textContent = Math.floor(current);
+        if (current >= target) clearInterval(timer);
+      }, 25);
+    }
+    const counterObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.querySelectorAll('[data-target]').forEach(animateCounter);
+          counterObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.stats, .hero__image').forEach(el => counterObs.observe(el));
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+      });
+    });
+  </script>
+</body>
 </html>

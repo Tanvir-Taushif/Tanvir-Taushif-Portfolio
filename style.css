@@ -16,7 +16,7 @@
   --accent-dim: rgba(99,220,170,0.12);
   --accent-2:   #5b8fff;
   --text:       #e8edf3;
-  --text-muted: #6b7a8d;
+  --text-muted: #8b98ab;
   --text-faint: #3a4556;
   --font-display: 'Syne', sans-serif;
   --font-body:    'DM Sans', sans-serif;
@@ -32,7 +32,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-body);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.7;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;

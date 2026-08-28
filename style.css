@@ -257,16 +257,21 @@ ul { list-style: none; }
 .hero__image { position: relative; z-index: 1; }
 .hero__scroll { grid-column: 1 / -1; position: relative; z-index: 1; }
 
+/* Hero role badge (pill) */
 .hero__label {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
+  gap: 9px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--accent);
   margin-bottom: 28px;
+  padding: 7px 16px 7px 14px;
+  border: 1px solid rgba(99,220,170,0.25);
+  border-radius: 30px;
+  background: var(--accent-dim);
 }
 .hero__label::before {
   content: '';
@@ -403,6 +408,7 @@ ul { list-style: none; }
   .hero__actions { justify-content: center; }
   .hero__desc { margin: 0 auto 40px; }
   .hero__scroll { justify-content: center; }
+  .hero__label { justify-content: center; }
 }
 
 /* ── SECTIONS ── */
@@ -599,9 +605,18 @@ ul { list-style: none; }
   border-radius: 50%;
   background: var(--bg);
   border: 2px solid var(--accent);
-  transition: background 0.3s;
+  transition: background 0.3s, box-shadow 0.3s;
 }
 .timeline__item:hover .timeline__dot { background: var(--accent); }
+
+/* Current-role emphasis */
+.timeline__item--current .timeline__dot {
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-dim);
+}
+.timeline__item--current .timeline__card {
+  border-color: rgba(99,220,170,0.22);
+}
 
 .timeline__card {
   background: var(--bg-card);
@@ -635,7 +650,30 @@ ul { list-style: none; }
   font-size: 0.82rem;
   color: var(--text-muted);
   display: block;
+  margin-bottom: 6px;
+}
+/* Location · work-type meta row */
+.timeline__meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.74rem;
+  color: var(--text-faint);
+  letter-spacing: 0.02em;
   margin-bottom: 12px;
+}
+.timeline__type {
+  display: inline-block;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  padding: 2px 9px;
+  border-radius: 20px;
 }
 .timeline__list { padding-left: 0; }
 .timeline__list li {
